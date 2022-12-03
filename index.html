@@ -1,0 +1,135 @@
+<!-- Developer:Sae Almeida, IS117101, Fall2022 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big&LilCeramics</title>
+    <link rel="shortcut icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <a href="/Project4/index.html"><img src="images/icon.jpg" alt="logo" class="logo"></a>
+    <h1><b>Big&Lil Ceramics</b></h1>
+<!--navigation bar ends html-->    
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="/pages/contact/contact.html">Contact Me</a></li>
+                <li><a href="/pages/about/about.html">About Us</a></li>
+                <li>
+                    <button onclick="myFunction()" class="dropbtn" >Shop</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/pages/product/product.html">Products</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+<!--navigation bar ends html-->    
+   
+
+
+<!--Search bar html-->    
+        <div class="topnav">
+            <form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+<!--Search bar html end-->    
+
+
+<!--all the images organizing html-->    
+    <main>
+        <div class="container">
+            <img src="images/cup1.jpeg" alt="mainproduct" class="image">
+            <div class="middle">
+                <a href="pages/product/product.html" class="text">Shop</a>
+            </div>
+        </div>
+        <p>Where You Find All the Joy Hidden in This World...</p>
+        <div class="cups">
+                <img src="images/bear.jpg" alt="bearcup" id="bear">
+                <img src="images/bread.jpg" alt="breadcup" id="bread">
+                <img src="images/tearcup.jpeg" alt="tearcup" id="tear">
+                <img src="images/monster.jpg" alt="monster" id="monster">
+                <img src="images/birdbowl.jpg" alt="birdbowl" id="birdbowl">
+                <img src="images/bearbowl.jpg" alt="bearbowl" id="bearbowl">
+        </div>
+    </main>
+<!--all the images organizing html-->    
+
+
+
+    <!-- cookies section-->
+        <script>
+             function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+            function setCookie(cname,cvalue,exdays) {
+                const d = new Date();
+                d.setTime(d.getTime() + (exdays*24*60*60*1000));
+                let expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                let user = getCookie("username");
+                if (user != "") {
+                    alert("Welcome again " + user);
+                } else {
+                    user = prompt("Please enter your name:","");
+                    if (user != "" && user != null) {
+                        setCookie("username", user, 30);
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="checkCookie()"></body>
+<!-- cookies end-->
+
+    <div class="foot"></div>
+
+    <footer>
+        <p>
+            &copy;2022, Sae Almeida
+            &emsp;&emsp;&emsp;&emsp;Privacy Statment
+            &emsp;&emsp;&emsp;&emsp;Terms of Service
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- Developer:Sae Almeida, IS117101, Fall2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us</title>
+    <link rel="shortcut icon" href="/Project4/images/icon.jpg">
+    <link rel="stylesheet" href="/Project4/styles/about.css">
+</head>
+<body>
+    <a href="/Project4/index.html"><img src="/Project4/images/icon.jpg" alt="logo" class="logo"></a>
+    <h1><b>Big&Lil Ceramics</b></h1>
+<!--navigation bar ends html-->    
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="/Project4/pages/contact/contact.html">Contact Me</a></li>
+                <li><a href="/Project4/pages/about/about.html">About Us</a></li>
+                <li>
+                    <button onclick="myFunction()" class="dropbtn" >Shop</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/Project4/pages/product/product.html">Products</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+<!--navigation bar ends html-->    
+   
+
+
+<!--Search bar html-->    
+        <div class="topnav">
+            <form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+<!--Search bar html end-->   
+
+
+<!--contact html-->
+    <section class="about">
+        <div class="content">
+           <img src="/Project4/images/creators.png" alt="creator">
+           <div class="message">
+                <h1>About Us</h1>
+                <h5>Welcome to Big&Lil Cermaics</h5>
+                <p>My name is xoxo and my partner, xoxo. We are the creator of Big&Lil! 
+                Big&Lil was formed during the year of 2020, when my sister and I decided to look for 
+                a hobby which became our dying passion. In order to share our creation and creativity,
+                we decided to open my pottery account in social media, and that is how Big&Lil was born.
+                We would love for you to take a look at both of our unique creation and taking them home
+                with you! We wish these creations can deliver the joy we wish for you guys!
+                Please follow our work @Big&Lilceramics</p>
+                <a href="/Project4/pages/contact/contact.html"><button id="contact" type="button">Contact Us</button></a>
+           </div>
+    </section>
+<!--contact end html-->
+
+<!--java buttoon html-->
+        <script>
+             function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        </script>
+    
+        <div class="foot"></div>
+        <footer>
+            <p>
+                &copy;2022, Sae Almeida
+                &emsp;&emsp;&emsp;&emsp;Privacy Statment
+                &emsp;&emsp;&emsp;&emsp;Terms of Service
+            </p>
+        </footer>
+    </body>
+</html>

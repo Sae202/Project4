@@ -1,0 +1,45 @@
+/* cookie style
+.container{
+    width: 1600px;
+    margin: auto;
+}
+.subcontainer{
+    width: 85%;
+    margin: auto;
+}
+#cookies{
+    width:1460px;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    background-color: rgba(10,10,10,50%);
+    z-index:1;
+}
+.cookies{
+    min-height: 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#cookie-btn{
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: lavender;
+    color: black;
+    border: 3px solid lavender;
+
+}
+@media(max-width:1600px){
+    .container{
+        width: 100%;
+    }
+}
+@media(max-width:1024px){
+    .cookies{
+        padding: 10px;
+    }
+}
+This section will remain as comment*/

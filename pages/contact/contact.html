@@ -1,0 +1,112 @@
+<!-- Developer:Sae Almeida, IS117101, Fall2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="/Project4/images/icon.jpg">
+    <link rel="stylesheet" href="/Project4/styles/contact.css">
+</head>
+    <body>
+        <a href="/Project4/index.html"><img src="/Project4/images/icon.jpg" alt="logo" class="logo"></a>
+        <h1 class="title"><b>Big&Lil Ceramics</b></h1>
+
+    <!--navigation bar ends html-->    
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="/Project4/pages/contact/contact.html">Contact Me</a></li>
+                    <li><a href="/Project4/pages/about/about.html">About Us</a></li>
+                    <li>
+                        <button onclick="myFunction()" class="dropbtn" >Shop</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="/Project4/pages/product/product.html">Products</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    <!--navigation bar ends html-->    
+       
+    <!--Search bar html-->    
+        <div class="topnav">
+            <form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    <!--Search bar html end-->   
+
+<!--conatct form-->
+<div class="container">
+	<div class="row">
+			<h1 class="contact">Contact Us</h1>
+	</div>
+	<div class="row">
+			<h4 class="contact">Any questions? Let us know!</h4>
+	</div>
+	<div class="row input-container">
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<input type="text" required />
+					<label>Name</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<input type="text" required />
+					<label>Email</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input" style="float:right;">
+					<input type="text" required />
+					<label>Phone Number</label> 
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<textarea required></textarea>
+					<label>Message</label>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="btn-lrg submit-btn">Send Message</div>
+			</div>
+            <div class="space"></div>
+	</div>
+</div>
+
+<!--java buttoon html-->
+<script>
+    function myFunction() {
+   document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+   if (!event.target.matches('.dropbtn')) {
+       var dropdowns = document.getElementsByClassName("dropdown-content");
+       var i;
+       for (i = 0; i < dropdowns.length; i++) {
+           var openDropdown = dropdowns[i];
+           if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+           }
+       }
+   }
+}
+</script>
+
+<div class="foot"></div>
+<footer>
+   <p>
+       &copy;2022, Sae Almeida
+       &emsp;&emsp;&emsp;&emsp;Privacy Statment
+       &emsp;&emsp;&emsp;&emsp;Terms of Service
+   </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!-- Developer:Sae Almeida, IS117101, Fall2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us</title>
+    <link rel="shortcut icon" href="/Project4/images/icon.jpg">
+    <link rel="stylesheet" href="/Project4/styles/bread.css">
+</head>
+<body>
+    <a href="/Project4/index.html"><img src="/Project4/images/icon.jpg" alt="logo" class="logo"></a>
+    <h1><b>Big&Lil Ceramics</b></h1>
+<!--navigation bar ends html-->    
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="/Project4/pages/contact/contact.html">Contact Me</a></li>
+                <li><a href="/Project4/pages/about/about.html">About Us</a></li>
+                <li>
+                    <button onclick="myFunction()" class="dropbtn" >Shop</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/Project4/pages/product/product.html">Products</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+<!--navigation bar ends html-->    
+   
+
+
+<!--Search bar html-->    
+        <div class="topnav">
+            <form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+<!--Search bar html end-->   
+
+
+<!--contact html-->
+    <section class="product">
+        <div class="container">
+           <img src="/Project4/images/bread.jpg" alt="breadcup" class="bread">
+<!--           <img src="/A12/images/bread2.jpg" alt="breadcup" class="bread2">-->
+<!--           <img src="/A12/images/bread3.jpg" alt="breadcup" class="bread3">-->
+
+           <div class="description">
+                <h1 style="float:left;">Freshly Baked Cup</h1>
+                <h5 class="price">$35.00</h5>
+                <p class="details">
+
+                    Handmade Ceramics&emsp;
+                    Material: Slip-cast mug with specialized glaze&emsp;
+                    Dimension: 11cm x 8cm (size varies)&emsp;
+                    Volume: 450-500ml / 15-17oz&emsp;
+                    Lead-free and food safe&emsp;
+                    Microwave safe!
+                        
+                </p>
+                <p><button id="cart" type="button">Add to Cart</button></p>
+           </div>
+        </div>
+    </section>
+<!--contact end html-->
+
+<!--java buttoon html-->
+        <script>
+             function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        </script>
+    
+        <div class="foot"></div>
+        <footer>
+            <p>
+                &copy;2022, Sae Almeida
+                &emsp;&emsp;&emsp;&emsp;Privacy Statment
+                &emsp;&emsp;&emsp;&emsp;Terms of Service
+            </p>
+        </footer>
+    </body>
+</html>
+
